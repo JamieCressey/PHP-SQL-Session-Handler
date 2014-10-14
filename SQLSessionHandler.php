@@ -99,14 +99,8 @@ class SQLSessionHandler{
 
 	$sql = "SELECT data FROM $this->dbTable WHERE id = :id";
 	$params = array("id"=>$id);
-        //$sql = sprintf("SELECT data FROM %s WHERE id = '%s'", $this->dbTable, $this->dbConnection->quote($id));
-        if ($result = $this->dbConnection->query($sql, $params)) {
-            if ($result->num_rows && $result->num_rows > 0) {
-                $record = $result->fetch_assoc();
-                return $record['data'];
-            } else {
-                return false;
-            }
+        if ($result = $this->dbConnection->single($sql, $params)) {
+            return $result;
         } else {
             return false;
         }
