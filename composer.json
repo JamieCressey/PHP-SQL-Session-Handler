@@ -2,7 +2,7 @@
 	"name": "jayc89/php-sql-session-handler",
 	"require": {
 		"php": ">=5.3.0",
-                "JayC89/PHP-MySQL-PDO-Database-Class": "dev-master"
+                "JayC89/PHP-MySQL-PDO-Database-Class": ">=2.0.0"
 	},
 	"autoload": {
 		"files": ["SQLSessionHandler.php"]
