@@ -7,7 +7,7 @@ Installation
 --------------
 
 ```sh
-composer install JayC89/PHP-SQL-Session-Handler
+composer install jayc89/php-sql-session-handler
 ```
 
 Configuration
