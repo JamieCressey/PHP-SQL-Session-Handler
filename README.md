@@ -1,3 +1,6 @@
+#Deprecated, please use [PHP-MySQL-Session-Handler](https://github.com/jayc89/PHP-MySQL-Session-Handler)
+
+
 PHP SQL Session Handler
 =========
 
