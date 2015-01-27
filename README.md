@@ -27,9 +27,14 @@ CREATE TABLE `session_handler` (
 
 ```sh
 require 'vendor/autoload.php';
-$db = new Db();
+
 $session = new SQLSessionHandler();
-$session->setDbConnection($db);
+
+// add db data
+$session->setDbDetails('localhost', 'username', 'password', 'database');
+// OR alternatively send a MySQLi resource
+// $db = new Db(); // https://github.com/jayc89/php-mysql-pdo-database-class
+// $session->setDbConnection($db);
 
 $session->setDbTable('session_handler');
 session_set_save_handler(array($session, 'open'),
